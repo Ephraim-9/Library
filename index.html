@@ -13,115 +13,41 @@
             <h1>Library</h1>
         </header>
         <main>
-            <h2>Your books</h2>
-            <div class="books">
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-                <div class="book">
-                    <div class="title">no longer human</div>
-                    <div class="author">osamu</div>
-                    <div class="pages">98</div>
-                    <div class="read">true</div>
-                </div>
-
+            <div class="mainHeader">
+                <h2>Your books</h2>
             </div>
+
+            <div id="books" class="books">
+                
+            </div>
+            
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup" id="popup">
+                    <span class="close" id="closePopup">&times;</span>
+                    <div class="popup-content">
+                        <h2>Book Submission Form</h2>
+                        <form id="userForm">
+                            <label for="title">Title:</label>
+                            <input type="text" id="title" name="title"><br><br>
+        
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" name="author"><br><br>
+        
+                            <label for="pages">Pages:</label>
+                            <input type="number" id="pages" name="pages"><br><br>
+        
+                            <label for="read">Read:</label>
+                            <input type="checkbox" id="read" name="read"><br><br>
+
+                            <label for="imgUrl">Cover:</label>
+                            <input type="url" id="imgUrl" name="imgUrl" required><br><br>
+        
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                
         </main>
     </div>        
     </div>
