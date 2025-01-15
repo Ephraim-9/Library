@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    background: radial-gradient(circle, rgba(0,0,69,1) 0%, rgba(0,0,102,1) 46%, rgba(0,0,102,1) 100%);
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    flex: 1;
+}
+
+header {
+    margin-top: 1%; /* Add a 1% gap from the top of the viewport */
+}
+
+header > h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    display: inline-block;
+    margin: 0
+}
+main {
+    width: 85%; /* Set the width to 20% */
+    height: 82.5%;
+    padding: 10px; /* Add some padding around the text */
+    color: white; /* Text color */
+    background-color: white;
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.801); /* Optional shadow for depth */
+    margin-top: 2%;
+    overflow:scroll ;
+}
+
+
+main h2 {
+    background: radial-gradient(circle, rgba(0,0,69,1) 0%, rgba(0,0,102,1) 46%, rgba(0,0,102,1) 100%);
+    background-color: white;
+    padding: 3% 10%;
+    width: 195px; /* Set the width to 20% */
+    padding: 10px; /* Add some padding around the text */
+    color: white; /* Text color */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    justify-self: center;
+}
+
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book {
+    background: url(https://cdn.sanity.io/images/p34gzxcg/production/37b728258990d5135f04780a3f21c052c57d6f7b-2095x3274.jpg?auto=format&w=1000&fit=scale);
+    background-size: cover;
+    min-width: 2vw;
+    min-height: 20vh;
+    margin: 5%;
+    display: grid;
+    padding: 1%;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 75% 25%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.801); /* Optional shadow for depth */
+}
+
+.pages {
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 0; /* Hide the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
+
+/* Optional: If you want to keep the horizontal scrollbar hidden but still allow horizontal scrolling */
+.scrollable {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Allow vertical scrolling */
+}
