@@ -88,26 +88,18 @@ main h2 {
 .bookCard {
     background-color: #bebebecb;
     background-size: cover;
-    min-width: 2vw;
-    min-height: 20vh;
+    width: 200px;
+    height: 320px;
     margin: 5%;
-    display: grid;
     padding: 1%;
-    grid-template-rows: 10vw 2vw;
-    grid-template-columns: 0 15vh;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.801);
 }
 
 .bookCard > * {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1); 
+    font-size: .83rem;
 }    
-
-.pages {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    justify-self: flex-end;
-}
 
 ::-webkit-scrollbar {
     width: 12px;
