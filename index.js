@@ -1,28 +1,47 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, read, imageUrl) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read; 
+    this.imageUrl = imageUrl;
 }
 
-function addBookToLibrary(title, author, pages, read) {
-  const book = new Book(title, author, pages, read);
+function addBookToLibrary(title, author, pages, read, imageUrl) {
+  const book = new Book(title, author, pages, read, imageUrl);
   myLibrary.push(book)
+  displayBooks()
 }
 
-addBookToLibrary('No Longer Human', 'Osamu Dazai', 304, true);
-addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 430, true);
-addBookToLibrary('Thus Spoke Zarathustra', 'Friedrich Nietzsche', 368, false);
-addBookToLibrary('The Metamorphosis', 'Franz Kafka', 120, false);
+addBookToLibrary('No Longer Human', 'Osamu Dazai', 304, true, 'https://i.pinimg.com/474x/88/00/25/88002513ef63d17d3afd5ed2ee24f4a6.jpg');
+addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 430, true, 'https://i.pinimg.com/474x/1b/46/e8/1b46e872ac035fa05f0d969c1dba600c.jpg');
+addBookToLibrary('Thus Spoke Zarathustra', 'Friedrich Nietzsche', 368, false, 'https://i.pinimg.com/236x/47/04/aa/4704aa893c20577bceb7081053c3c6e1.jpg');
+addBookToLibrary('The Metamorphosis', 'Franz Kafka', 120, false, 'https://i.pinimg.com/236x/29/17/6f/29176fb9a7e14fc536beab10b5791dba.jpg');
 
 console.log(myLibrary)
 
-const booksInLib = myLibrary.forEach(book => {
-    return (`Title: ${book.title}, Author: ${book.author}, Pages: ${book.pages}, Read: ${book.read}`);
-    
-});
+
+function displayBooks () {
+    const booksContainer = document.getElementById('books');
+    booksContainer.innerHTML = ""
+
+    myLibrary.forEach((book, index) => {
+        
+        const bookCard = document.createElement('div')
+        bookCard.classList.add('bookCard')
+
+        bookCard.innerHTML = `
+            <div class="title">${book.title}</div>
+            <div class="author">${book.author}</div>
+            <div class="pages">${book.pages}</div>`
+
+        bookCard.style.backgroundImage = `url(${book.imageUrl})`;
+
+        booksContainer.appendChild(bookCard);
+    })
+}
+
 
 
 function addContent() {
@@ -60,17 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const read = document.getElementById('read').value;
         const imageUrl = document.getElementById('imgUrl').value;
 
-        const bookDiv = document.createElement('div');
-        bookDiv.classList.add('book');
-
-        bookDiv.innerHTML = `
-            <div class="title">${title}</div>
-            <div class="author">${author}</div>
-            <div class="pages">${pages}</div>
-        `;
-        bookDiv.style.backgroundImage = `url('${imageUrl}')`;
-
-        booksContainer.appendChild(bookDiv);
+        addBookToLibrary(title, author, pages, read, imageUrl)
 
         form.reset();
 
