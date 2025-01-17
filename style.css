@@ -98,8 +98,36 @@ main h2 {
 
 .bookCard > * {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1); 
-    font-size: .83rem;
 }    
+
+.bookCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: auto; /* Rows will adjust based on content */
+    gap: 10px; /* Space between grid items */
+    padding: 15px; /* Padding inside the card */
+}
+
+.title {
+    grid-column: span 2; 
+    font-weight: bold; 
+    font-size: 1.2rem;
+}
+
+.author {
+    align-self: flex-end;
+}
+
+.pages {
+    align-self: flex-end;
+    justify-self: flex-end;
+    font-size: .83rem;
+}
+
+.read {
+    grid-column: span 2; 
+    text-align: right; 
+}
 
 ::-webkit-scrollbar {
     width: 12px;
