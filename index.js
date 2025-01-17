@@ -20,7 +20,7 @@ addBookToLibrary('The Metamorphosis', 'Franz Kafka', 120, false);
 console.log(myLibrary)
 
 const booksInLib = myLibrary.forEach(book => {
-    console.log(`Title: ${book.title}, Author: ${book.author}, Pages: ${book.pages}, Read: ${book.read}`);
+    return (`Title: ${book.title}, Author: ${book.author}, Pages: ${book.pages}, Read: ${book.read}`);
     
 });
 
@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="title">${title}</div>
             <div class="author">${author}</div>
             <div class="pages">${pages}</div>
-            <div class="read">${read}</div>
         `;
         bookDiv.style.backgroundImage = `url('${imageUrl}')`;
 

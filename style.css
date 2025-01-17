@@ -28,6 +28,7 @@ main {
     width: 85%;
     height: 82.5%;
     padding: 10px;
+    margin-bottom: 1.5%;
     color: white;
     background-color: white;
     border-radius: 15px;
@@ -168,6 +169,7 @@ main h2 {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 label {
@@ -184,9 +186,13 @@ input[type="url"] {
     font-size: 1rem;
 }
 
-input[type="checkbox"] {
-    margin-top: 5px;
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
 }
+
 
 button {
     padding: 10px;
