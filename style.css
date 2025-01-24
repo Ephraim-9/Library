@@ -47,7 +47,7 @@ main {
 main h2 {
     background: radial-gradient(circle, rgba(0,0,69,1) 0%, rgba(0,0,102,1) 46%, rgba(0,0,102,1) 100%);
     padding: 3% 10%;
-    width: 195px;
+    width: 70px;
     padding: 10px;
     color: white;
     border-radius: 15px;
@@ -59,7 +59,7 @@ main h2 {
 #openPopup {
     width: 50px;
     height: 50px;
-    margin: 0 2%;
+    margin: 0 5%;
     border: none;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(0,0,69,1) 0%, rgba(0,0,102,1) 46%, rgba(0,0,102,1) 100%);

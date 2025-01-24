@@ -1,11 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read, imageUrl) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read; 
-    this.imageUrl = imageUrl;
+class Book {
+    constructor (title, author, pages, read, imageUrl) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read; 
+        this.imageUrl = imageUrl;
+    }
 }
 
 function addBookToLibrary(title, author, pages, read, imageUrl) {
@@ -18,7 +20,6 @@ addBookToLibrary('No Longer Human', 'Osamu Dazai', 304, true, 'https://i.pinimg.
 addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 430, true, 'https://i.pinimg.com/474x/1b/46/e8/1b46e872ac035fa05f0d969c1dba600c.jpg');
 addBookToLibrary('Thus Spoke Zarathustra', 'Friedrich Nietzsche', 368, false, 'https://i.pinimg.com/236x/47/04/aa/4704aa893c20577bceb7081053c3c6e1.jpg');
 addBookToLibrary('The Metamorphosis', 'Franz Kafka', 120, false, 'https://i.pinimg.com/236x/29/17/6f/29176fb9a7e14fc536beab10b5791dba.jpg');
-
 addBookToLibrary('The Stranger', 'Albert Camus', 123, true, 'https://i.pinimg.com/236x/1e/41/ac/1e41ac43ba3556f962ca6f0baef52719.jpg');
 addBookToLibrary('The Trial', 'Franz Kafka', 256, true, 'https://i.pinimg.com/236x/31/30/d7/3130d75c76cea6d83262794a4cf88b6c.jpg');
 addBookToLibrary('The Bell Jar', 'Sylvia Plath', 244, true, 'https://i.pinimg.com/236x/2e/d8/e1/2ed8e17d003f3e572504d28aeaec132e.jpg');
